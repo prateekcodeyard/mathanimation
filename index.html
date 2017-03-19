@@ -1,0 +1,247 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+		<script src="js/jquery-1.12.4.js"></script>
+		<script src="js/jquery.gsap.min.js"></script>
+		<script type="text/javascript" src="js/TimelineLite.min.js"></script>
+		<script type="text/javascript" src="js/TweenMax.min.js"></script>
+		<script type="text/javascript" src="js/TimelineMax.min.js"></script>
+		<script type="text/javascript" src="js/preloader.js"></script>
+		<script type="text/javascript" src="js/timeline.js"></script>
+		<script type="text/javascript" src="js/scale.js"></script>
+	</head>
+	<body>
+			<div class="container">
+				<div class="loadDiv">
+				  <div class="loader"></div>
+			    </div>
+
+				<div id="bigPlayButton"></div>
+
+				<div class="topText">Consider this triangle.</div>
+				<span class="inch25">25 in.</span>
+				<span class="height_sp">height <span class="operator">=</span> </span>
+				<span class="inch24">24 in.</span>
+				<span class="base_sp">base <span class="operator">=</span> </span>
+				<span class="inch7">7 in.</span>
+				
+				<!-- ****DUPLICATES**** -->
+				<span class="inch25_d">25 in.</span>
+				<span class="height_sp_d">height <span class="operator">=</span> </span>
+				<span class="inch24_d">24 in.</span>
+				<span class="base_sp_d">base <span class="operator">=</span> </span>
+				<span class="inch7_d">7 in.</span>
+
+				<div class="bottomText">Find the <span class="c-area">area</span> of the triangle in square inches.</div>
+				<div class="bottomBox">
+					<div class="inchTag">in<sup>2</sup></div>
+				</div>
+				<div class="tickMark">
+					<img src="svg/Check-mark.svg"></img>
+				</div>
+				
+				<div class="areaDialogBox">
+					<img src="svg/Vocab_Box.svg" class="Vocab_Box"></img>
+					<b>area</b> - amount of space within a geometric figure
+				</div>
+				<div class="strategyBox">Strategy</div>
+				<div class="strategyDiv"><i>When you need to find the area of a triangle, identify the base and the height.</i></div>
+
+				<img src="svg/cone.svg" class="mathSVG cone"></img>
+				<img src="svg/Green_cone.svg" class="mathSVG Green_cone"></img>
+				<img src="svg/Green_line.svg" class="mathSVG Green_line"></img>
+				<img src="svg/Green_patch.svg" class="mathSVG Green_patch"></img>
+				<img src="svg/Green_Square-line.svg" class="mathSVG Green_Square-line"></img>
+				<img src="svg/Only_Triangle.svg" class="mathSVG Only_Triangle"></img>
+				<img src="svg/orenge-Fill.svg" class="mathSVG orenge-Fill"></img>
+				<img src="svg/Triangle_with_black-dot.svg" class="mathSVG Triangle_with_black-dot"></img>
+				<img src="svg/Triangle_with-cone.svg" class="mathSVG Triangle_with-cone"></img>
+				<img src="svg/Triangle2_with_black-dot.svg" class="mathSVG Triangle2_with_black-dot"></img>
+
+ <!-- ****Math line 0 starts here**** -->
+				<div id="math0">
+					<div class="lines" id="line1">
+						<span class="col1">Area of rectangle</span>
+						<span class="operator">=</span>
+						<span class="col3">(base)(height)</span>
+					</div>
+					<div class="lines" id="line2">
+						<span class="col1">A</span>
+						<span class="operator">=</span>
+						<span class="col3"><i>bh</i></span>
+						</span>
+					</div>
+					<div class="lines" id="line3">
+						<span class="col1">A</span>
+						<span class="operator">=</span>
+						<span class="col3">
+							<span>(7 in.)</span>
+							<span class="hiddenSpan">(24 in.)</span>
+						</span>
+					</div>
+					<div class="lines" id="line4">
+						<span class="col1">A</span>
+						<span class="operator">=</span>
+						<span class="col3">168 in<sup>2</sup></span>
+					</div>
+				</div>
+ <!-- ****Math line 1 starts here**** -->
+				<div id="math1">
+					<div class="lines" id="line5">
+						<span class="col1">Area of triangle</span>
+						<span class="operator">=</span>
+						<span class="col3">
+							<div class="mathContainer">
+								<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" indentalign="left">
+									<mtable columnalign="center">
+										<mfrac><mn>1</mn><mn>2</mn></mfrac>
+									</mtable>
+								</math>
+							</div>
+							<span>(base)(height)</span>
+						</span>
+					</div>
+					<div class="lines" id="line6">
+						<span class="col1">A</span>
+						<span class="operator">=</span>
+						<span class="col3">
+							<div class="mathContainer">
+								<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" indentalign="left">
+									<mtable columnalign="center">
+										<mfrac><mn>1</mn><mn>2</mn></mfrac>
+									</mtable>
+								</math>
+							</div>
+							<i><div class="b_tag b_zoom">b</div>
+							<div class="h_tag h_zoom">h</div></i>
+							<span id="color1"></span>
+						</span>
+					</div>
+					<div class="lines" id="line7">
+						<span class="col1">A</span>
+						<span class="operator">=</span>
+						<span class="col3">
+							<div class="mathContainer">
+								<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" indentalign="left">
+									<mtable columnalign="center">
+										<mfrac><mn>1</mn><mn>2</mn></mfrac>
+									</mtable>
+								</math>
+							</div>
+							<i><div class="b_tag b_hide">b</div>
+							<div class="h_tag h_hide">h</div></i>
+							<div class="textDiv td5">(<span id="color2">7</span> in.)</div>
+							<div class="textDiv td6">(<span id="color3">24</span> in.)</div>
+							<span id="colorLine7"></span>
+						</span>
+					</div>
+					<div class="lines" id="line9">
+						<span class="col1">A</span>
+						<span class="operator">=</span>
+						<span class="col3">
+							<div class="mathContainer">
+								<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" indentalign="left">
+									<mtable columnalign="center">
+										<mfrac><mn>1</mn><mn>2</mn></mfrac>
+									</mtable>
+								</math>
+							</div>
+							<span>(<span id="color4">168</span> in<sup>2</sup>)</span>
+							<span id="color5"></span>
+						</span>
+					</div>
+					<div class="lines" id="line10">
+						<span class="col1">A</span>
+						<span class="operator">=</span>
+						<span class="col3">84 in<sup>2</sup></span>
+					</div>
+				</div>
+				<div class="finalAns">84</div>
+ <!-- ****Math line 2 starts here**** -->
+				<div id="math2">
+					<div class="lines" id="line11">
+						<span class="col1">Area of triangle</span>
+						<span class="operator">=</span>
+						<span class="col3">
+							<div class="mathContainer">
+								<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" indentalign="left">
+									<mtable columnalign="center">
+										<mfrac><mn>1</mn><mn>2</mn></mfrac>
+									</mtable>
+								</math>
+							</div>
+							<span>(base)(height)</span>
+						</span>
+					</div>
+					<div class="lines" id="line12">
+						<span class="col1">A</span>
+						<span class="operator">=</span>
+						<span class="col3">
+							<div class="mathContainer">
+								<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" indentalign="left">
+									<mtable columnalign="center">
+										<mfrac><mn>1</mn><mn>2</mn></mfrac>
+									</mtable>
+								</math>
+							</div>
+							<i><div class="b_tag b_zoom">b</div>
+							<div class="h_tag h_zoom">h</div></i>
+						</span>
+					</div>
+					<div class="lines" id="line13">
+						<span class="col1">A</span>
+						<span class="operator">=</span>
+						<span class="col3">
+							<div class="mathContainer">
+								<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" indentalign="left">
+									<mtable columnalign="center">
+										<mfrac><mn>1</mn><mn>2</mn></mfrac>
+									</mtable>
+								</math>
+							</div>
+							<span>(168 in<sup>2</sup>)</span>
+						</span>
+					</div>
+					<div class="lines" id="line14">
+						<span class="col1">A</span>
+						<span class="operator">=</span>
+						<span class="col3">84 in<sup>2</sup></span>
+					</div>
+				</div>
+
+				<div class="checkText">Check</div>
+				<div class="checkUnder"></div>
+
+				
+			</div>
+			<div id="audiobar">
+				<audio id="audioCtrl" controls="controls">
+				  <source type="audio/mp3" src="audio/animation.mp3">
+				</audio>
+			</div>
+		<div class="audioText" style="display: none">
+			Okay, so this problem is asking us to find the area of the triangle. So, this means we are being asked to find the amount of space within the triangle.
+			When you need to find the area of a triangle, identify the base and the height.We know that the height of a triangle forms a right angle with the base.
+			So, let’s start by looking for a right angle.This box indicates that the sides are perpendicular and form a right angle.
+			Either of the two sides that form a right angle can be the base or the height.
+			Let’s use the 7-inch side as the base.
+			So what do we do with the base and the height once we’ve found them?
+			Let’s take a minute to play with this triangle. If we copy it and move the copy around, we end up with a rectangle with the same base and height as our triangle!
+			We know the area of a rectangle is the base times the height.
+			We can see that our original triangle covers one-half the area of a rectangle with the same base and height.
+			This means that the area of our triangle is one-half the area of the rectangle.
+			Given this information, we can write a formula for the area of a triangle as one-half times base times height where b represents the base and h represents the height.
+			We chose to use the 7-inch side as the base and the 24-inch side as the height. So the area of the triangle is one-half of seven times twenty-four.
+			Now we can multiply. The product of 7 and 24 is 168. One-half of 168 is the same as dividing 168 by 2, which results in 84.
+			So the area of the triangle is 84 inches squared.
+			We can check our answer by using what we know about the area of a rectangle. Substitute the values of the base and the height of the rectangle into the formula.
+			Since we know that the area of a right triangle is one-half the area of a rectangle with the same base and height, we can divide the area of the rectangle, 168, by 2 to get 84.
+			The answers match, so the area of the right triangle is 84 square inches.
+		</div>
+	
+		
+
+	</body>
+</html>

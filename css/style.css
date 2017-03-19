@@ -1,0 +1,570 @@
+html, body, #header {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow:hidden;
+}
+.loadDiv{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #F9F9F9;
+  z-index: 9999;
+}
+
+.loader {
+  position: absolute;
+ margin: 0 auto;
+ /*top: 250px;*/
+  width: 100%;
+  height: 100%;
+  background: url('../svg/loading.gif') 50% 50% no-repeat;
+  background-color: none; 
+  z-index: 10000;
+}
+#bigPlayButton {
+    width: 100%;
+    position: absolute;
+    background-image: url("../svg/bigPlay.svg");
+    background-size: 30% auto;
+    /* left: 0px; */
+    /* top: 250px; */
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0,0,0,0.2);
+    cursor: pointer;
+    z-index: 10;
+    /*display: none;*/
+}
+#audiobar:hover {
+    cursor: pointer;
+}
+audio{
+    display: block;
+     /* width: 1920px; */
+    cursor:pointer !important;
+
+}
+#audiobar{
+    z-index: 10;
+
+}
+#audioCtrl{
+    display:none;
+
+}
+.show{
+    display:block!important;
+}
+
+
+.container{
+	border: 1px solid;
+      height: 1080px;
+    width: 1920px; 
+	font-size: 23px;
+    font-family: arial;
+    overflow: hidden;
+    color: #333333;
+    /* opacity: 0; */
+    position: relative;
+/*    -ms-transform-origin: 0% 0%;
+ -webkit-transform-origin: 0% 0%; 
+ transform-origin: 0% 0%;
+ -ms-transform: scale(0.5, 0.5);
+ -webkit-transform: scale(0.5, 0.5);
+ transform: scale(0.5, 0.5); */
+}
+.operator{
+    font-family: Tahoma;
+}
+.topText{
+	position: absolute;
+    top: 50px;
+    left: 50px;
+}
+.bottomText{
+	position: absolute;
+    top: 940px;
+    left: 50px;
+}
+.bottomBox{
+	position: absolute;
+    top: 990px;
+    left: 90px;
+	border: 3px solid #5cbbbb;
+    height: 50px;
+    width: 130px;
+    overflow:hidden;
+    box-shadow: inset 1px 4px 29px -7px grey;
+}
+.tickMark{
+    position: absolute;
+    font-size: 40px;
+    opacity: 0;
+    top: 1005px;
+    left: 45px;
+    width: 40px;
+}
+.inchTag{
+    height: 54px;
+    width: 44px;
+    right: -80px;
+    /*display: table-cell;*/
+    vertical-align: middle;
+    background-color: #5cbbbb;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    font-size: 23px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.areaDialogBox{
+    position: absolute;
+    height: 76px;
+    width: 277px;
+    /* border: 3px solid orange; */
+    top: 828px;
+    left: 50px;
+    font-size: 25px;
+    padding: 0px 10px 0 16px;
+     opacity: 0; 
+    z-index: 1;
+}
+.Vocab_Box{
+    position: absolute;
+    height: 136px;
+    width: 356px;
+    position: absolute;
+    top: -19px;
+    left: -15px;
+    z-index: -1;
+}
+.strategyBox{
+    background-color: #81BA50;
+    font-size: 32px;
+    position: absolute;
+    height: 62px;
+    width: 140px;
+    left: 1931px;
+    color: #fff;
+    padding: 23px 0 0 22px;
+    top: 757px;
+    z-index: 1;
+}
+.strategyDiv{
+    border: 2px solid grey;
+    font-size: 22px;
+    position: absolute;
+    height: 50px;
+    width: 444px;
+    left: 1931px;
+    padding: 15px;
+  -webkit-box-shadow: 0px 0px 21px 5px rgba(0,0,0,0.14);
+-moz-box-shadow: 0px 0px 21px 5px rgba(0,0,0,0.14);
+box-shadow: 0px 0px 21px 5px rgba(0,0,0,0.14);
+    top: 758px;
+}
+.inch25, .inch25_d {
+    /*font-weight: bold;*/
+    /*font-size: 25px;*/
+    position: absolute;
+    left: 146px;
+    top: 470px;
+}
+.height_sp, .height_sp_d{
+    /*font-size: 25px;*/
+    position: absolute;
+    left: 307px;
+    top: 470px;
+    opacity: 0;
+}
+.inch24{
+    /*font-weight: bold;*/
+    /*font-size: 25px;*/
+    position: absolute;
+	left: 307px;
+	top: 470px;
+}
+.base_sp, .base_sp_d{
+    /*font-size: 25px;*/
+    position: absolute;
+    left: 160px;
+    top: 756px;   
+    opacity: 0; 
+    padding-right: 20px;
+}
+.inch7{
+    /*font-weight: bold;*/
+    /*font-size: 25px;*/
+    position: absolute;
+    left: 205px;
+    top: 756px;
+}
+.inch24_d{
+    /*font-weight: bold;*/
+    /*font-size: 25px;*/
+    position: absolute;
+    left: 403px;
+    top: 470px; 
+    opacity: 0; 
+}
+.inch7_d{
+    /*font-weight: bold;*/
+    /*font-size: 25px;*/
+    position: absolute;
+    left: 241px;
+    top: 756px; 
+    opacity: 0; 
+}
+
+.textDiv{
+    font-family: arial !important;
+    /*font-style: normal !important;*/
+    font-size: 23px;
+    display: inline;
+    position: absolute;
+    opacity:0;
+    z-index: -1;
+}
+.td5{
+    /* top: 314px; */
+    left: 223px;
+    z-index: 0;
+}
+.td6{
+    left: 182px;
+    padding-left: 104px;
+    padding-bottom: 10px;
+    z-index: -1;
+}
+#color1{
+    position: absolute;
+    height: 51px;
+    width: 45px;
+    display: inline;
+    top: 40px;
+    left: 206px;
+    z-index: -3;
+}
+#colorLine7{
+    position: absolute;
+    height: 51px;
+    width: 153px;
+    display: inline;
+    top: 93px;
+    left: 206px;
+    z-index: -3;
+}
+
+#color5{
+    position: absolute;
+    height: 51px;
+    width: 23px;
+    top: 150px;
+    left: 203px;
+    z-index: -3;
+}
+
+.MathJax span {
+    font-size: 23px !important;
+    font-family: arial !important;
+    /*line-height: 23px !important;*/
+}
+.mfrac span span:nth-of-type(1){
+    top: -4.48em !important;
+    margin-left: -0.22em !important;
+}
+.mfrac span span:nth-of-type(2){
+    top: -3.321em !important;
+    margin-left: -0.22em !important;
+}
+.mfrac span{
+    width: 0.5em;
+}
+.MathJax_Display {
+    text-align: left;
+    width: 0 !important;
+    height: 0;
+    text-align: center;
+    margin: 1em 0em;
+    position: absolute !important;  
+    float: left;
+    z-index: 3;
+}
+
+#line1 .mtd:first-of-type, 
+#line2 .mtd:first-of-type, 
+#line3 .mtd:first-of-type, 
+#line4 .mtd:first-of-type, 
+#line5 .mtd:first-of-type, 
+#line6 .mtd:first-of-type, 
+#line7 .mtd:first-of-type, 
+#line8 .mtd:first-of-type, 
+#line9 .mtd:first-of-type, 
+#line10 .mtd:first-of-type,
+#line11 .mtd:first-of-type,
+#line12 .mtd:first-of-type,
+#line13 .mtd:first-of-type{
+    text-align: right;
+    margin-right: 20px;
+    display:inline-block !important;
+   
+}
+#line1 .mtd:nth-of-type(2), 
+#line2 .mtd:nth-of-type(2), 
+#line3 .mtd:nth-of-type(2), 
+#line4 .mtd:nth-of-type(2), 
+#line5 .mtd:nth-of-type(2), 
+#line6 .mtd:nth-of-type(2), 
+#line7 .mtd:nth-of-type(2), 
+#line8 .mtd:nth-of-type(2), 
+#line9 .mtd:nth-of-type(2), 
+#line10 .mtd:nth-of-type(2),
+#line11 .mtd:nth-of-type(2),
+#line12 .mtd:nth-of-type(2),
+#line13 .mtd:nth-of-type(2){
+    text-align: center;
+    margin-right: 20px;
+     display:inline-block !important;
+   
+}
+#line1 .mtd:nth-of-type(3), 
+#line2 .mtd:nth-of-type(3), 
+#line3 .mtd:nth-of-type(3), 
+#line4 .mtd:nth-of-type(3), 
+#line5 .mtd:nth-of-type(3), 
+#line6 .mtd:nth-of-type(3), 
+#line7 .mtd:nth-of-type(3), 
+#line8 .mtd:nth-of-type(3), 
+#line9 .mtd:nth-of-type(3), 
+#line10 .mtd:nth-of-type(3),
+#line11 .mtd:nth-of-type(3),
+#line12 .mtd:nth-of-type(3),
+#line13 .mtd:nth-of-type(3){
+    text-align: center;
+     display:inline-block !important;
+}
+.lines{
+    margin-top: 15px;
+    margin-top: 26px;
+    opacity:0;
+    /*display: block;*/
+}
+#line1{
+    margin-top: 0px;
+}
+#line2{
+    margin-left: 160px;
+}
+#line3{
+    margin-left: 160px;
+}
+#line4{
+    margin-left: 160px;
+}
+#line5{
+    margin-left: 22px;
+    margin-top: 0px;
+}
+#line6{
+    margin-left: 163px;
+}
+#line7{
+    margin-left: 163px;
+}
+#line8{
+    margin-left: 103px;
+}
+#line9{
+    margin-left: 163px;
+}
+#line10{
+    margin-left: 163px;
+    /*margin-right: 152px;*/
+    position: absolute;
+}
+#line12{
+    margin-left: 139px;
+}
+#line13{
+    margin-left: 139px;
+}
+#line14{
+    margin-left: 139px;
+    opacity:0;
+}
+/*#line11{
+    margin-left: 49px;
+}*/
+/*#line5 .col3, #line6 .col3 {
+    padding-left: 20px;
+}*/
+.b_tag, .h_tag, #line6 .col1, #line6 .operator {
+    display: inline;
+}
+.h_tag{
+    margin-left: -6px;
+}
+#line5 .operator{
+    padding-right: 20px;
+}
+#line6 .col1{
+    /*padding-right: 7px;*/
+}
+#line6 .operator{
+    padding-right: 20px;
+}
+#line7 .operator{
+    padding-right: 20px;
+}
+#line5 .MathJax_Display{
+    left: 196px;
+    top: -27px;
+}
+#line6 .MathJax_Display{
+    left: 196px;
+    top: 26px;
+}
+#line7 .MathJax_Display{
+    left: 196px;
+    top: 80px;
+}
+#line9 .MathJax_Display{
+    left: 196px;
+    top: 134px;
+}
+#line9 .mathContainer {
+    margin-right: 22px;
+}
+#line11 .operator{
+    padding-right: 20px;
+}
+#line11 .MathJax_Display{
+    left: 172px;
+    top: -3px;
+}
+#line12 .MathJax_Display{
+    left: 173px;
+    top: 51px;
+}
+#line12 .mathContainer {
+    margin-right: 22px;
+}
+#line13 .MathJax_Display{
+    left: 173px;
+    top: 108px;
+}
+#line13 .mathContainer {
+    margin-right: 22px;
+}
+#line14 .MathJax_Display{
+    left: 173px;
+    top: 164px;
+}
+/*#line14 .mathContainer {
+    margin-right: 22px;
+}*/
+.mathContainer{
+    display: inline;
+}
+#audiobar{
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+#math0{
+    position: absolute;
+    top: 120px;
+    left: 1220px;
+}
+#math1{
+    position: absolute;
+    top: 250px;
+    left: 1222px;
+}
+#math2{
+    position: absolute;
+    top: 336px;
+    left: 1372px;
+    /*opacity:0;*/
+}
+.finalAns{
+    position: absolute;
+    top: 532px;
+    left: 1556px;
+    opacity:0;
+}
+.checkText{
+    position: absolute;
+    top: 55px;
+    left: 1351px;
+    height: 32px;
+    width: 90px;
+    background-color: #81BA50;
+    color: #fff;
+    /* font-weight: bold; */
+    font-size: 27px;
+    padding: 10px 15px;
+    opacity:0;
+}
+.checkUnder{
+    position: absolute;
+    top: 100px;
+    left: 1469px;
+    height: 7px;
+    width: 350px;
+    background: -webkit-linear-gradient(left, #81BA50, #fff); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #81BA50, #fff); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #81BA50, #fff); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #81BA50, #fff); /* Standard syntax */
+    opacity:0;
+}
+.mathSVG{
+    position: absolute;
+    top: -50px;
+    left: -740px;
+    height: 1080px;
+    width: 1920px;
+    opacity:0;
+    z-index: -1;
+}
+ .MathJax span {
+     clip: auto !important;
+     display:inline-block !important;
+ }
+
+.mtr{
+    opacity:0;
+}
+.cone{
+
+}
+.Green_cone{
+
+}
+.Green_line{
+
+}
+.Green_patch{
+
+}
+.Green_Square-line{
+
+}
+.Only_Triangle{
+
+}
+.orenge-Fill{
+
+}
+.Triangle_with_black-dot{
+    opacity: 1;
+}
+.Triangle_with-cone{
+
+}
+.Triangle2_with_black-dot{
+
+}
